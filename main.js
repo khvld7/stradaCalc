@@ -22,4 +22,15 @@ equal.addEventListener('click', function knopka(){
         alert('Неверная операция');
     }
     document.getElementById('resultat').innerHTML = result;
+
+
+    const historyOperation = document.createElement('div');
+    historyOperation.textContent = result;  
+    document.body.appendChild(historyOperation);
+
+    historyOperation.addEventListener('click', function(){
+        let someOperatoin = document.querySelector('body');
+        someOperatoin.removeChild(historyOperation);
+    })
 });
+
